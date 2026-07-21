@@ -1,8 +1,6 @@
 package com.vmware.geode.twitter.repository;
 
 import com.vmware.geode.twitter.domain.SentimentStats;
-import io.pivotal.services.dataTx.geode.io.QuerierService;
-import nyla.solutions.core.patterns.creational.generator.JavaBeanGeneratorCreator;
 import nyla.solutions.core.util.Organizer;
 import org.apache.geode.management.DistributedRegionMXBean;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collection;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 

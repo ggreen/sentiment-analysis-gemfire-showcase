@@ -1,7 +1,6 @@
 package com.vmware.geode.twitter.repository;
 
 import com.vmware.geode.twitter.domain.SentimentStats;
-import io.pivotal.services.dataTx.geode.io.QuerierService;
 import nyla.solutions.core.util.Organizer;
 import org.apache.geode.management.DistributedRegionMXBean;
 import org.junit.jupiter.api.BeforeEach;
@@ -38,7 +37,7 @@ class SentimentStatsGeodeRepositoryTest
     {
         var expected = new SentimentStats(1,1);
 
-        Collection<Object> collection = Organizer.toList(Double.valueOf(expected.getAvgPolarity()).doubleValue());
+        Collection<Object> collection = Organizer.change().toList(Double.valueOf(expected.getAvgPolarity()).doubleValue());
         when(regionMXBean.getPutsRate()).thenReturn(Integer.valueOf(expected.getTweetRate()).floatValue());
         when(queryService.query(anyString())).thenReturn(collection);
         assertEquals(expected,subject.findSentimentStats());

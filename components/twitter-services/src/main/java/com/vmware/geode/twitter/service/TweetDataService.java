@@ -2,8 +2,8 @@ package com.vmware.geode.twitter.service;
 
 import com.vmware.geode.twitter.domain.SentimentStats;
 import com.vmware.geode.twitter.domain.TweetSentiment;
+import com.vmware.geode.twitter.repository.QuerierService;
 import com.vmware.geode.twitter.repository.SentimentStatsRepository;
-import io.pivotal.services.dataTx.geode.io.QuerierService;
 import org.apache.geode.cache.Region;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

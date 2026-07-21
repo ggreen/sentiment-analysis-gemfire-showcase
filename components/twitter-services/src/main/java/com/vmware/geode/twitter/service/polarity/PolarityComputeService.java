@@ -46,7 +46,7 @@ public class PolarityComputeService
     {
         Tweet tweet = new Tweet();
         tweet.setText(sentiment);
-        tweet.setId(Text.generateId());
+        tweet.setId(Text.generator().generateId());
 
         return tweet;
     }

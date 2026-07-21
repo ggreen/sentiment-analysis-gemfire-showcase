@@ -36,7 +36,7 @@ public class TweetTextGeneratorFromCsv
     @Scheduled(fixedDelay = 5000)
     public void generate() throws IOException
     {
-            CsvReader reader = new CsvReader(IO.toReader(csv.getInputStream()));
+            CsvReader reader = new CsvReader(IO.reader().toReader(csv.getInputStream()));
             for (List<String> row : reader) {
                 tweetsRegion.put(row.get(0),
                         Tweet.builder()

@@ -1,7 +1,6 @@
 package com.vmware.geode.twitter.repository;
 
 import com.vmware.geode.twitter.domain.SentimentStats;
-import io.pivotal.services.dataTx.geode.io.QuerierService;
 import org.apache.geode.management.DistributedRegionMXBean;
 import org.springframework.stereotype.Component;
 

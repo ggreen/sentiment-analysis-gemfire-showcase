@@ -4,7 +4,6 @@ import com.vmware.geode.twitter.domain.Tweet;
 import com.vmware.geode.twitter.service.polarity.PolarityComputeService;
 import nyla.solutions.core.net.http.Http;
 import nyla.solutions.core.util.Debugger;
-import org.apache.commons.collections.functors.ExceptionPredicate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

@@ -28,7 +28,7 @@ class TweetTextGeneratorFromCsvTest
     void generateTweet() throws IOException
     {
         var csv = Paths.get("src/main/resources/generator-TWEETS/tweets.csv").toFile();
-        InputStream inputStream = IO.getFileInputStream(csv.getAbsolutePath());
+        InputStream inputStream = IO.reader().getFileInputStream(csv.getAbsolutePath());
         when(resource.getInputStream()).thenReturn(inputStream);
         var subject = new TweetTextGeneratorFromCsv(rawTweet,resource);
 
